@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS - example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              montserrat: ['Montserrat', 'sans-serif'],
+              lato: ['Lato', 'sans-serif'],
+            },
+            colors: {
+              customGray: '#878E95',
+              customContacts: '#00A0DB',
+              customBlue: '#0EB4F2',
+              customLightGray: '#EDEFF1',
+              customLighterGray: '#808080',
+              customDarkBlue: '#11B4F0',
+              customDescription: '#0BA6FF',
+              customForms: '#F5F7FA',
+              'custom-dark-rgba': 'rgba(36, 31, 31, 0.35)',
+              'custom-gray-rgba': 'rgba(255, 255, 255, 0.24)',
+            },
+            backgroundImage: {
+              'custom-gradient': 'linear-gradient(95deg, #0EB4F2 0%, #1D72EA 40%, #3B84ED 60%, #0BA6FF 100%)',
+            },
+            boxShadow: {
+              'custom': '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+            },
+          }
+        }
+      }
+    </script>
+</head>
+<body>
+  <header class="header flex flex-col lg:flex-row lg:justify-around lg:items-center xl:flex-row xl:justify-around xl:items-center 2xl:flex-row 2xl:justify-around 2xl:items-center bg-black font-montserrat py-3 gap-1">
+    <h1 class="header_title font-montserrat text-xl sm:text-xl md:text-xl lg:text-4xl xl:text-5xl 2xl:text-6xl not-italic font-bold text-white text-center">
+      AV-AVIONICS
+    </h1>
+    <div class="header_description text-center lg:text-left xl:text-left 2xl:text-left">
+      <p class="header_description_info font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-black text-white">
+        Reach the heights of free flight with our advanced technologies.
+      </p>
+      <p class="header_description_contacts font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-medium text-customGray pt-1">
+        Get in touch with us 
+        <a class="font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-medium text-customContacts" href="tel:+380950183643">
+          +38 (095) 018-36-43
+        </a>
+        <a class="font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-medium text-customContacts underline" href="mailto:avavionicscompany@gmail.com">
+          avavionicscompany@gmail.com
+        </a>
+      </p>
+    </div>
+  </header>
+  <main class="main">
+    <section class="main_airplanePicture">
+      <img class="w-full shadow-custom" src="img/airplane.png" alt="Airplane">
+    </section>
+    <section class="main_aviation py-3 2xl:py-7 lg:px-10 xl:px-10 2xl:px-40">
+      <h2 class="main_aviation_title font-montserrat text-xl sm:text-xl md:text-xl lg:text-5xl xl:text-5xl 2xl:text-6xl not-italic font-bold text-customBlue text-center lg:text-left xl:text-left 2xl:text-left pb-2 lg:pb-8 xl:pb-8 2xl:pb-8 lg:pl-2 xl:pl-2 2xl:pl-2">
+        AVIATION VIEW
+      </h2>
+      <div class="main_aviation_components flex flex-col lg:grid lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 lg:gap-12 xl:gap-16 2xl:gap-20">
+        <div class="main_aviation_components_hardwareDevelopment bg-customLightGray py-2 text-center rounded xl:max-h-44 2xl:max-h-56 lg:px-1">
+          <h6 class="main_aviation_components_hardwareDevelopment_title font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-semibold text-black">
+            HARDWARE DEVELOPMENT
+          </h6>
+          <p class="main_aviation_components_hardwareDevelopment_description font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl no-italic font-medium text-black">The process of designing and creating physical electronic components and systems.</p>
+          <div class="main_aviation_components_hardwareDevelopment_logos flex justify-around pt-2 items-center">
+            <img class="size-1/5" src="img/analog_devices.png" alt="Analog Devices">
+            <img class="size-1/5" src="img/ki_cad.png" alt="KiCad">
+            <img class="size-1/5" src="img/texas_instruments.png" alt="Texas instruments">
+          </div>
+        </div>
+        <div class="main_aviation_components_dashboard flex justify-center items-center">
+          <img class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-5/12 xl:w-5/12 2xl:w-5/12 my-2 lg:my-0 xl:my-0 2xl:my-0" src="img/dashboard.png" alt="Airplane's dashboard">
+        </div>
+        <div class="main_aviation_components_softwareDevelopment bg-customLightGray py-2 text-center rounded mb-2 lg:mb-0 xl:mb-0 2xl:mb-0">
+          <h6 class="main_aviation_components_softwareDevelopment_title font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-semibold text-black">
+            SOFTWARE DEVELOPMENT
+          </h6>
+          <p class="main_aviation_components_softwareDevelopment_description font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl no-italic font-medium text-black">
+            It encompasses the development of software that controls hardware and facilitates user interaction.
+          </p>
+          <div class="main_aviation_components_softwareDevelopment_logos flex justify-around pt-2 items-center">
+            <img class="size-1/5" src="img/st.png" alt="ST">
+            <img class="size-1/5" src="img/open_gl.png" alt="OpenGL">
+            <img class="size-1/5" src="img/dwin.png" alt="DWIN">
+          </div>
+        </div>
+        <div class="main_aviation_components_modeling bg-customLightGray py-2 text-center rounded">
+          <h6 class="main_aviation_components_modeling_title font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-semibold text-black">
+            MODELING
+          </h6>
+          <p class="main_aviation_components_modeling_description font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl no-italic font-medium text-black">
+            The process of creating virtual or mathematical models of a system to analyze its behavior and properties.
+          </p>
+          <div class="main_aviation_components_modeling_logos flex justify-around items-center">
+            <img class="size-1/5" src="img/ansys.png" alt="Ansys">
+            <img class="size-1/5" src="img/matlab.png" alt="Matlab">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main_products bg-black pb-10 lg:mt-10 xl:mt-10 2xl:mt-10">
+      <h2 class="main_products_title font-montserrat text-center text-xl text-xl sm:text-xl md:text-xl lg:text-5xl xl:text-5xl 2xl:text-6xl not-italic font-bold text-white py-3">
+        PRODUCTS SYSTEM
+      </h2>
+      <div class="flex flex-col lg:flex-row xl:flex-row 2xl:flex-row lg:justify-around xl:justify-around 2xl:justify-around">
+      <div class="main_products_avionics flex flex-col justify-center items-center">
+        <img class="w-full lg:size-2/3 xl:size-2/3 2xl:size-2/3" src="img/avionics.png" alt="Avionics">
+        <h6 class="main_products_avionics_title font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-semibold text-white text-center pt-2">
+          Avionics
+        </h6>
+        <p class="main_products_avionics_description font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-normal text-customDarkBlue text-center mb-2">
+          Ground Station UAV and Aviation
+        </p>
+        <a class="main_products_avionics_button flex justify-center items-center bg-custom-gradient text-white font-lato rounded-lg size-1/4 lg:size-1/6 lg:px-11 xl:size-1/6 xl:px-11 2xl:size-1/6 2xl:px-11 not-italic m-auto text-xs whitespace-nowrap lg:h-10 xl:max-h-10 2xl:max-h-10 lg:mt-2 2xl:mt-7" href="#">
+          Learn more
+        </a>
+      </div>
+      <div class="main_products_flightController flex flex-col justify-center items-center">
+        <img class="w-full" src="img/flight_controller_uav.png" alt="Flight Controller UAV">
+        <h6 class="main_products_flightController_title font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-semibold text-white text-center pt-2 lg:pt-12 xl:pt-0 2xl:pt-14">
+          Flight Controller UAV
+        </h6>
+        <p class="main_products_flightController_description font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-normal text-customDarkBlue text-center mb-2 xl:mb-0">
+          Drone Kamikaze / FPV
+        </p>
+        <a class="main_products_flightController_button flex justify-center items-center bg-custom-gradient text-white font-lato rounded-lg size-1/4 lg:size-1/6 lg:px-11 xl:size-1/6 xl:px-11 2xl:size-1/6 2xl:px-11 not-italic m-auto text-xs whitespace-nowrap lg:h-10 xl:max-h-10 2xl:max-h-10 lg:mt-9 xl:mt-12 2xl:mt-10" href="#">
+          Learn more
+        </a>
+      </div>
+      <div class="main_products_digitalVideo flex flex-col justify-center items-center lg:pt-14 xl:pt-11 2xl:pt-11">
+        <img class="w-full" src="img/digital_video_uav.png" alt="Digital Video UAV">
+        <h6 class="main_products_digitalVideo_title font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-semibold text-white text-center pt-2 lg:pt-8 xl:pt-2 2xl:pt-12">
+          Digital Video UAV
+        </h6>
+        <p class="main_products_digitalVideo_description font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-normal text-customDarkBlue text-center mb-2">
+          Digital UAV video link 20-200 km
+        </p>
+        <a class="main_products_digitalVideo_button flex justify-center items-center bg-custom-gradient text-white font-lato rounded-lg size-1/4 lg:size-1/6 lg:px-11 xl:size-1/6 xl:px-11 2xl:size-1/6 2xl:px-11 not-italic m-auto text-xs whitespace-nowrap lg:h-10 xl:max-h-10 2xl:max-h-10 lg:mt-3 xl:mt-11 2xl:mt-9" href="#">
+          Learn more
+        </a>
+      </div>
+      <div class="main_products_navigationSystem flex flex-col justify-center items-center lg:pt-28 xl:pt-24 2xl:pt-10 lg:pr-2 xl:pr-2 2xl:pr-2">
+        <img class="w-full" src="img/ins_gnss_ahrs.png" alt="Military Navigation System">
+        <h6 class="main_products_navigationSystem_title font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-semibold text-white text-center pt-2 lg:pt-7 xl:pt-3 2xl:pt-32">
+          INS / GNSS / AHRS
+        </h6>
+        <p class="main_products_navigationSystem_description font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-normal text-customDarkBlue text-center mb-2">
+          Military Navigation System
+        </p>
+        <a class="main_products_navigationSystem_button flex justify-center items-center bg-custom-gradient text-white font-lato rounded-lg size-1/4 lg:size-1/6 lg:px-11 xl:size-1/6 xl:px-11 2xl:size-1/6 2xl:px-11 not-italic m-auto text-xs whitespace-nowrap lg:h-10 xl:max-h-10 2xl:max-h-10 lg:mt-10 xl:mt-8 2xl:mt-10" href="#">
+          Learn more
+        </a>
+      </div>
+      </div>
+    <section class="main_support mt-5 lg:flex lg:flex-row lg:justify-center lg:gap-5">
+      <div class="main_support_ministry flex flex-col justify-center items-center bg-custom-dark-rgba py-5 lg:py-20 lg:px-2 xl:py-20 2xl:px-2 xl:py-20 2xl:px-2 lg:w-52 xl:w-60 2xl:w-52">
+        <img class="max-w-56" src="img/ministry_of_defence_of_ukraine.png" alt="Ministry of Defence of Ukraine">
+        <p class="main_support_ministry_description text-customDescription font-montserrat text-xs not-italic font-normal text-customDarkBlue text-center mt-2">
+          Ministry of Defence of Ukraine
+        </p>
+      </div>
+      <div class="main_support_forces flex flex-col justify-center items-center bg-custom-dark-rgba py-5 lg:py-20 lg:px-2 xl:py-20 2xl:px-2 xl:py-20 2xl:px-2 lg:w-52 xl:w-60 2xl:w-52">
+        <img class="max-w-56" src="img/ukranian_land_forces.png" alt="Ukrainian Land Forces">
+        <p class="main_support_forces_description text-customDescription font-montserrat text-xs not-italic font-normal text-customDarkBlue text-center mt-2">
+          Ukrainian Land Forces
+        </p>
+      </div>
+      <div class="main_support_acVector flex flex-col justify-center items-center bg-custom-dark-rgba py-5 lg:py-20 lg:px-2 xl:py-20 2xl:px-2 xl:py-20 2xl:px-2 lg:w-52 xl:w-60 2xl:w-52">
+        <img class="max-w-56" src="img/ak_vector.png" alt="AC Vector">
+        <p class="main_support_acVector_description text-customDescription font-montserrat text-xs not-italic font-normal text-customDarkBlue text-center mt-2 2xl:mt-9">
+          AK Vector
+        </p>
+      </div>
+      <div class="main_support_aviasich flex flex-col justify-center items-center bg-custom-dark-rgba py-5 lg:py-20 lg:px-2 xl:py-20 2xl:px-2 xl:py-20 2xl:px-2 lg:w-52 xl:w-60 2xl:w-52">
+        <img class="max-w-56" src="img/aviasich.png" alt="Aviasich">
+        <p class="main_support_aviasich_description text-customDescription font-montserrat text-xs not-italic font-normal text-customDarkBlue text-center mt-2 2xl:pt-20">
+          Aviasich
+        </p>
+      </div>
+      <div class="main_support_steamHub flex flex-col justify-center items-center bg-custom-dark-rgba py-5 lg:py-20 lg:px-2 xl:py-20 2xl:px-2 xl:py-20 2xl:px-2 lg:w-52 xl:w-60 2xl:w-52">
+        <img class="max-w-56" src="img/stem_hub.png" alt="Stem Hub">
+        <p class="main_support_steamHub_description text-customDescription font-montserrat text-xs not-italic font-normal text-customDarkBlue text-center mt-2 2xl:pt-4">
+          Steam HUB
+        </p>
+      </div>
+    </section>
+  </section>
+  <section class="main_information bg-customForms flex flex-col lg:flex-row xl:flex-row 2xl:flex-row lg:my-30 2xl:mx-80 2xl:my-20 lg:pt-10">
+    <div class="main_information_contacts flex flex-col gap-3 pt-3 pb-3 px-2 2xl:mt-14">
+      <div class="main_information_contacts_address">
+        <p class="font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-semibold text-black text-center">
+          Address
+        </p>
+        <p class="font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic text-black text-center">
+          Kyiv, Ukraine
+        </p>
+      </div>
+      <div class="main_information_contacts_phone">
+        <p class="font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-semibold text-black text-center">
+          Phone
+        </p>
+        <p class="font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic text-black text-center">
+          +38 095 018-36-43
+        </p>
+      </div>
+      <div class="main_information_contacts_email">
+      <p class="font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-semibold text-black text-center">
+        E-mail
+      </p>
+      <p class="font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic text-black text-center">
+        avavionicscompany@gmail.com
+      </p>
+      </div>
+      <img class="size-1/6 2xl:size-1/3 lg:w-32 2xl:w-56 m-auto lg:my-20 2xl:my-16" src="img/pdf.png" alt="PDF">
+      <div>
+        <p class="font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-medium text-black text-center">
+          Company profile
+        </p>
+        <p class="font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic text-black text-center">
+          Learn more about our company, products, and areas of operations.
+        </p>
+      </div>
+      <div>
+        <a class="flex justify-center items-center bg-custom-gradient text-white font-lato rounded-lg size-1/4 lg:size-1/2 lg:px-11 lg:py-4 xl:size-1/6 xl:px-11 2xl:size-1/2 2xl:px-11 2xl:py-4 not-italic m-auto text-xs" href="#">
+          Download
+        </a>
+      </div>
+    </div>
+    <div class="main_information_form px-5 py-5 bg-white lg:my-4 lg:mx-8 2xl:my-16 2xl:mx-16 2xl:pb-32">
+      <h4 class="font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic font-medium text-black text-center pb-4">
+        We’re always glad to answer your questions!
+      </h4>
+      <p class="font-montserrat text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl not-italic text-black text-center pb-3">
+        Please fill the form below if you have any questions.
+      </p>
+      <form class="flex flex-col gap-5 lg:w-full">
+        <div class="flex flex-col items-center">
+          <label for="name">Name</label>
+          <input class="rounded border-2 border-gray-300 w-full" type="text" id="name">
+        </div>
+        <div class="flex flex-col items-center">
+          <label for="email">Email</label>
+          <input class="rounded border-2 border-gray-300 w-full" type="email" id="email">
+        </div>
+        <div class="flex flex-col items-center">
+          <label for="phone">Phone number (optional)</label>
+          <input class="rounded border-2 border-gray-300 w-full" type="tel" id="phone">
+        </div>
+        <div class="flex flex-col items-center">
+          <label for="company">Company (optional)</label>
+          <textarea class="rounded border-2 border-gray-300 w-full" id="company" rows="3"></textarea>
+        </div>
+        <div class="flex flex-col items-center">
+          <label for="message" class="form-label">Message (optional)</label>
+          <textarea class="rounded border-2 border-gray-300 w-full" id="message" rows="3"></textarea>
+          <div>
+            <a class="flex justify-center items-center bg-custom-gradient text-white font-lato rounded-lg px-5 lg:px-72 2xl:px-80 mt-3 lg:w-full xl:w-full 2xl:w-full not-italic m-auto text-xs lg:h-10 xl:max-h-10 2xl:max-h-10 xl:mt-11 2xl:mt-9" href="#">
+              Sent
+            </a>
+          </div>
+          <div class="pt-5">
+            <p class="text-customLighterGray font-montserrat text-xs not-italic text-center pb-2">
+              Never share sensitive information (credit card numbers, social security numbers, passwords) through this form.
+            </p>
+            <p class="text-customLighterGray font-montserrat text-xs not-italic text-center">
+              This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+            </p>
+          </div>
+  </section>
+  </main>
+  <footer class="bg-black flex flex-col items-center justify-center 2xl:flex-row justify-around">
+    <div class="flex flex-col">
+      <h2 class="font-montserrat text-xl 2xl:text-6xl not-italic font-bold text-white text-center">
+        AV-AVIONICS
+      </h2>
+      <p class="text-white font-montserrat text-xs not-italic text-center 2xl:text-left">Have questions?</p>
+      <p class="text-white font-montserrat text-xs not-italic text-center 2xl:text-left">+38 095 018-36-43</p>
+      <p class="font-montserrat text-xs not-italic font-medium text-customGray pt-1">24/7 dedicated customer support</p>
+    </div>
+    <div class="flex flex-col items-center justify-center pt-5 2xl:pt-0 gap-1">
+      <p class="text-white font-montserrat text-xs not-italic text-center">About us</p>
+      <p class="text-white font-montserrat text-xs not-italic text-center">Contact</p>
+      <p class="text-white font-montserrat text-xs not-italic text-center">Follow us</p>
+      <div class="flex">
+        <img class="pt-2" src="img/linkedin_logo.svg" alt="LinkedIn Logo">
+        <img src="img/facebook_logo.svg" alt="Facebook Logo">
+        <img class="w-11 h-11 pt-1" src="img/youtube_logo.svg" alt="Youtube Logo">
+        <img class="w-11 h-11 pt-4" src="img/instagram_logo.svg" alt="Instagram Logo">
+      </div>
+    </div>
+    <div>
+      <p class="text-white font-montserrat text-xs not-italic text-center 2xl:text-left 2xl:pt-10">Are you an aviation owner or fan?</p>
+      <p class="font-montserrat text-center 2xl:text-left text-xs not-italic font-medium text-customGray pt-1">Enter your email, and we will update you</p>
+      <p class="font-montserrat text-center 2xl:text-left text-xs not-italic font-medium text-customGray pt-1">with How-tos, tips, and the latest news on</p>
+      <p class="font-montserrat text-center 2xl:text-left text-xs not-italic font-medium text-customGray pt-1">drones & new system aviation!</p>
+      <div class="flex justify-between bg-custom-gray-rgba rounded-3xl px-2 mt-4 mb-10 2xl:py-2.5">
+        Email*
+        <img src="img/telegram_logo.svg" alt="Telegram Logo">
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
